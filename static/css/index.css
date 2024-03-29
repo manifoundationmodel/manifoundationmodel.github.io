@@ -1,5 +1,5 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Baloo 2', 'Noto Sans', sans-serif;
 }
 
 
@@ -17,14 +17,13 @@ body {
   font-variant: small-caps;
 }
 
-
-.teaser .hero-body {
+.hero-body {
   padding-top: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 .teaser {
-  font-family: 'Google Sans', sans-serif;
+  font-family: 'Baloo 2', 'Google Sans', sans-serif;
 }
 
 
@@ -48,11 +47,11 @@ body {
 }
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Baloo 2', 'Google Sans', sans-serif;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Baloo 2', 'Google Sans', sans-serif;
 }
 
 .publication-venue {

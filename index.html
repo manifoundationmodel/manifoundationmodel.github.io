@@ -47,7 +47,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ManiFoundation Model for General-Purpose Robotic Manipulation of Contact Synthesis with Arbitrary Objects and Robots</h1>
+          <h1 class="title is-3 publication-title">ManiFoundation Model for General-Purpose Robotic Manipulation of Contact Synthesis with Arbitrary Objects and Robots</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://ariszxxu.github.io/">Zhixuan Xu</a>*<sup>1</sup>,</span>
@@ -97,16 +97,6 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://manifoundationmodel.github.io/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
               <span class="link-block">
                 <a href="https://manifoundationmodel.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
@@ -114,6 +104,15 @@
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://manifoundationmodel.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supp.</span>
                 </a>
               </span>
               <!-- Video Link. -->
@@ -146,7 +145,6 @@
                   <span>Data</span>
                   </a>
             </div>
-
           </div>
         </div>
       </div>
@@ -157,13 +155,14 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <picture id="teaser">
-        <source src="./static/images/teaser.jpg" type="image/jpeg">
-        <img src="./static/images/teaser.jpg" alt="teaser">
-      </picture>
-      <h2 class="subtitle has-text-centered">
-        ManiFoundation Model can perform various manipulation tasks with diverse kinds of manipulators and objects.
-      </h2>
+      <table width="82%" align="center" border="0" cellpadding="0">
+          <td width="100%" align="center" valign="middle">
+            <video id="teaser_vid"  controls  width="100%">
+              <source src="./static/videos/720p_1min.mp4" type="video/mp4">
+            </video>
+            <h2 class="title is-5">A one minute spotlight video with narration.</h2>
+          </td>
+      </table>
     </div>
   </div>
 </section>
@@ -178,45 +177,82 @@
         <div class="content has-text-justified">
           <p>
             To substantially enhance robot intelligence, there is a pressing need to develop a large model that enables general-purpose robots to 
-            proficiently undertake a broad spectrum of manipulation tasks, akin to the versatility exhibited by LLMs. The vast diversity in objects, robots, 
-            and manipulation tasks presents huge challenges. Our work introduces a comprehensive framework to develop a foundation model for general robotic 
-            manipulation to generate contacts for arbitrary objects and robots. Specifically, our model tasks as inputs object point clouds, object physical 
-            attributes, target point clouds or target motions, robot point clouds, and manipulation region masks if needed. It outputs contact points on the 
-            object and associated contact forces or post-contact motions for robots to achieve the desired manipulation task. We perform extensive experiments 
-            both in the simulation and real-world settings, manipulating articulated rigid objects, rigid objects, and deformable objects that vary in 
-            dimensionality, ranging from one-dimensional objects like ropes to two-dimensional objects like cloth and extending to three-dimensional objects such as 
-            plasticine. Our model achieves success rates over 90%. 
+            proficiently undertake a broad spectrum of manipulation tasks, akin to the versatile task-planning ability exhibited by LLMs. The vast diversity 
+            in objects, robots, and manipulation tasks presents huge challenges. Our work introduces a comprehensive framework to develop a foundation model 
+            for general robotic manipulation that formalizes a manipulation task as <u>contact synthesis</u>. Specifically, our model takes as input object and robot 
+            manipulator point clouds, object physical attributes, target motions, and manipulation region masks. It outputs contact points on the object and 
+            associated contact forces or post-contact motions for robots to achieve the desired manipulation task. We perform extensive experiments both in the
+            simulation and real-world settings, manipulating <u>articulated rigid, rigid, and deformable</u> objects that vary in dimensionality, ranging 
+            from one-dimensional objects like ropes to two-dimensional objects like cloth and extending to three-dimensional objects such as plasticine. 
+            Our model achieves average success rates of around 90%.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
+    <hr style="height:1.5px;width:95%;color:rgb(77, 77, 77);background-color:rgb(77, 77, 77);margin-left: auto;margin-right: auto;">
+    
     <!-- Pipeline. -->
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <picture id="pipeline">
-          <source src="./static/images/overview06.png" type="image/png">
-          <img src="./static/images/overview06.png" alt="pipeline">
-        </picture>
-        <h2 class="subtitle has-text-centered">
-          Overview of our ManiFoundation Model.
-        </h2>
+          <h2 class="title is-3 has-text-centered">Pipeline Overview</h2>
+          <picture id="pipeline">
+            <source src="./static/images/overview06.png" type="image/png">
+            <img src="./static/images/overview06.png" alt="pipeline">
+          </picture>
+          <div class="content has-text-justified">
+            <p>
+              The pipeline of our Manifoundation model. Left: we decompose a manipulation task to a sequence of object point cloud motions from either
+              VLM-based planning or a flow model. Middle: we train a ManiFoundation network to predict the contact point and force heatmap for each motion of the
+              sequence. Right: we acquire the robot pose for execution based on optimization with the initial results from the contact point and force heatmaps.
+            </p>
+          </div>
       </div>
     </div>
 
     <!-- Network. -->
     <div class="container is-max-desktop">
       <div class="hero-body">
+        <h2 class="title is-4 has-text-centered">Network Architecture</h2>
         <picture id="network">
           <source src="./static/images/network08.jpg" type="image/jpeg">
           <img src="./static/images/network08.jpg" alt="network">
         </picture>
-        <h2 class="subtitle has-text-centered">
-          Overview of our ManiFoundation Network.
-        </h2>
+        <div class="content has-text-justified">
+          <p>
+          Overview of our ManiFoundation Network. The feature extractor
+          module incorporates the information from both object and robot point
+          clouds, and the CVAE module generates the contact point and force maps
+          on the given object.
+          </p>
+        </div>
       </div>
     </div>    
+
+    <!-- Dataset. -->
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title is-4 has-text-centered">Dataset</h2>
+        <picture id="dataset">
+          <source src="./static/images/UniContactNet5.png" type="png">
+          <img src="./static/images/UniContactNet5.png" alt="dataset">
+        </picture>
+        <picture id="dataset2">
+          <source src="./static/images/deform.png" type="png">
+          <img src="./static/images/deform.png" alt="dataset2">
+        </picture>
+        <div class="content has-text-justified">
+          <p>
+            We create a large-scale comprehensive annotated dataset that includes articulated/rigid objects and 
+            deformable objects in 1D/2D/3D forms. Each training example contains the input of our network: 
+            oriented object point cloud, target point cloud, target motion, object physical properties, manipulation 
+            region mask, manipulator point cloud, and the ground truth contact point heatmap.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
 </section>
 
 
