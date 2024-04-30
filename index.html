@@ -553,7 +553,7 @@
   </div>
 </div>
 
-<hr style="height:1.5px;width:75%;color:rgb(77, 77, 77);background-color:rgb(77, 77, 77);margin-left: auto;margin-right: auto;">
+<hr style="height:1.5px;width:65%;color:rgb(77, 77, 77);background-color:rgb(77, 77, 77);margin-left: auto;margin-right: auto;">
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -564,15 +564,60 @@
       </div>
     </div>
     <p>
-      We visualize some results of using ManiFoundation Model in 3D. The visualized tasks include rotating a knob,
-      lifting a book, open a microwave door, and lift a plane. 
-      <br><br>
-      The visualization includes the original object, object motion, multiple proposals of predicted heatmap and forcemap.
+      We visualize some multi-modal solutions of using ManiFoundation Model for manipulating rigid bodies. The visualized tasks include rotating a knob,
+      tilting a book, open a microwave door, and lift a plane. The visualization includes the original object, object motion, multiple proposals of predicted heatmap and forcemap.
     </p>    
   </div>
 </section>
+
 <div class="column is-centered has-text-centered">
-  <h2 class="title is-4">Book</h2>    
+  <h2 class="title is-4">Rotate the Knob</h2>    
+</div>
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-1</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/knob/ori_pointcloud_and_motion.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-2</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/knob/pred_heatmap_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-3</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/knob/pred_heatmap_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-4</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/knob/pred_heatmap_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="column is-centered has-text-centered">
+  <h2 class="title is-4">Tilt the Book</h2>    
 </div>
 
 <div class="columns is-centered has-text-centered">
@@ -617,6 +662,98 @@
   </div>
 </div>
 
+<div class="column is-centered has-text-centered">
+  <h2 class="title is-4">Lift the Plate</h2>    
+</div>
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-1</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/plate2/ori_pointcloud_and_motion.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-2</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/plate2/pred_heatmap_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-3</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/plate2/pred_heatmap_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-4</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/plate2/pred_heatmap_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="column is-centered has-text-centered">
+  <h2 class="title is-4">Push the Microwave Door</h2>    
+</div>
+
+<div class="columns is-centered has-text-centered">
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-1</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/microwave/ori_pointcloud_and_motion.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-2</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/microwave/pred_heatmap_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-3</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/microwave/pred_heatmap_1.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-4</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/microwave/pred_heatmap_2.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
