@@ -11,7 +11,7 @@ def rotate_one_glb_for_model_viewer(glb_path):
     mesh.export(glb_path)
     
 glb_dir = "static/3d"
-glb_subset_dir = ["book", "knob", "microwave", "plate2"]
+glb_subset_dir = ["cup_mask", "kettle_mask", ]
 for subset in glb_subset_dir:
     
     glb_dir_path = os.path.join(glb_dir, subset)

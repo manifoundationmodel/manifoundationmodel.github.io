@@ -755,6 +755,94 @@
   </div>
 </div>
 
+<hr style="height:1.5px;width:65%;color:rgb(77, 77, 77);background-color:rgb(77, 77, 77);margin-left: auto;margin-right: auto;">
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Pred. & Opt. with Manipulation Regions</h2>
+      </div>
+    </div>
+    <p>
+      We visualize some results of using ManiFoundation Model for manipulating rigid bodies with spefified manipulation region. The visualized tasks include tilting a kettle,
+      lifting the cup and grasping a pan. Our visualization includes the input point cloud of the object, object motion, predicted heatmap and forcemap, and optimized hand configuration.
+    </p>    
+  </div>
+</section>
+
+<div class="column is-centered has-text-centered">
+  <h2 class="title is-4">Tilting the Kettle</h2>    
+</div>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-1</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/kettle_mask/ori_pointcloud_and_motion.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-2</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/kettle_mask/pred_heatmap_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-3</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/kettle_mask/kettle_hand.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="column is-centered has-text-centered">
+  <h2 class="title is-4">Lifting the Cup</h2>    
+</div>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-1</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/cup_mask/ori_pointcloud_and_motion.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-2</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/cup_mask/pred_heatmap_0.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-2">
+    <!-- <h2 class="title is-4">Sample-3</h2> -->
+    <div class="columns is-centered">
+      <div class="column content">
+        <model-viewer bounds="tight" enable-pan="" src="static/3d/cup_mask/mug_hand.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" shadow-intensity="1" camera-orbit="-45deg 75deg auto" ar-status="not-presenting">
+        </model-viewer>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
